@@ -14,7 +14,7 @@ function App() {
   const countTotalFeedback = state.good + state.neutral + state.bad;
 
   const onStatBtnClick = (option) => {
-    setState({ [option]: state[option] + 1, })
+    setState({ ...state, [option]: state[option] + 1, })
   };
 
   const countPositiveFeedbackPercentage = Math.round((state.good / countTotalFeedback) * 100);
