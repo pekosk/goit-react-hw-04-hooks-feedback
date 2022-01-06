@@ -26,7 +26,7 @@ function App() {
           onLeaveFeedback={onStatBtnClick} />
       </Section>
       <Section title="Statistics">
-        {this.countTotalFeedback() ? (
+        {countTotalFeedback ? (
           < Statistics
             good={state.good}
             neutral={state.neutral}
