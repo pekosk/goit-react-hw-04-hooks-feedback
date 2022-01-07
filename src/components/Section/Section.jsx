@@ -1,5 +1,6 @@
 import styles from "./Section.module.css";
 import PropTypes from "prop-types";
+import { memo } from "react";
 
 const Section = ({ title, children }) => {
   return (
@@ -15,4 +16,4 @@ Section.prototype = {
   children: PropTypes.node.isRequired,
 };
 
-export default Section;
+export default memo(Section);

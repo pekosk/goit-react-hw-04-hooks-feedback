@@ -1,10 +1,11 @@
 import styles from "./Feedback.module.css";
 import PropTypes from "prop-types";
+import { memo } from "react";
 
 const Feedback = ({ options, onLeaveFeedback }) => {
   const button = options.map(button => (
     <li key={button} className={styles.listItem}>
-      <button className={styles.feedbackBtn} type="button" value={button} onClick={onLeaveFeedback}>
+      <button className={styles.feedbackBtn} type="button" value={button} onClick={() => onLeaveFeedback(button)}>
         {button}
       </button>
     </li>
@@ -21,4 +22,4 @@ Feedback.proptype = {
     onLeaveFeedback: PropTypes.func.isRequired
 };
 
-export default Feedback;
+export default memo(Feedback);
