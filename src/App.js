@@ -5,13 +5,13 @@ import Feedback from './components/Feedback';
 import Statistics from './components/Statistics';
 import Notification from './components/Notification';
 
+const initialState = {
+  good: 0,
+  neutral: 0,
+  bad: 0,
+};
+const options = ['good', 'neutral', 'bad'];
 function App() {
-  const initialState = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
-  const options = ['good', 'neutral', 'bad'];
   const [state, setState] = useState(initialState);
 
   const onStatBtnClick = (option) => {
